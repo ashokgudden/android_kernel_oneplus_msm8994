@@ -1203,7 +1203,7 @@ static int fpc1020_probe(struct spi_device *spi)
     fpc1020->screen_state = 1;
     #endif
 
-	fpc1020->proximity_state = 0;	// default proximity state is fp reader enabled
+	fpc1020->proximity_state = 1;	// default proximity state is fp reader disabled
 
 	irqf = IRQF_TRIGGER_RISING | IRQF_ONESHOT;
 	mutex_init(&fpc1020->lock);
